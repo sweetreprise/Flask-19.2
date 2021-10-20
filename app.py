@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request
 from stories import stories
-from flask_debugtoolbar import DebugToolbarExtension
+# from flask_debugtoolbar import DebugToolbarExtension
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "password"
-debug = DebugToolbarExtension(app)
+# app.config['SECRET_KEY'] = "password"
+# debug = DebugToolbarExtension(app)
 
 @app.route('/')
 def choose_story():
@@ -26,7 +26,7 @@ def show_form():
 @app.route('/story')
 def show_story():
     """generates story for user"""
-    prompt_id = request.args["prompt"]
+    prompt_id = request.args["story_prompt"]
     story = stories[prompt_id]
 
     adlib = story.generate(request.args)

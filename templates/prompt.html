@@ -2,18 +2,21 @@
 {% block title %} PROMPT {% endblock %}
 {% block content %}
     <h1>Madlibs</h1>
-    <form action="/form">
-            <label for="prompt">Choose a prompt: </label>
-            <select name="prompt" id="prompt">
+    
+    <div class="container">
+        <form action="/form">
+                <label for="prompt">Choose a prompt: </label>
+                <select name="prompt" id="prompt">
 
-                {% for story in stories %}
+                    {% for story in stories %}
 
-                <option value="{{ story.key }}">{{ story.title }}</option>
+                    <option value="{{ story.key }}">{{ story.title }}</option>
 
-                {% endfor %}
-            </select>
+                    {% endfor %}
+                </select>
 
-        <button>Submit</button>
-    </form>
+            <button>Submit</button>
+        </form>
+    </div>
 
 {% endblock %}

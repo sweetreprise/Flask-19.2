@@ -2,15 +2,19 @@
 {% block title %} FORM {% endblock %}
 {% block content %}
 
-    <h1>You have chosen "{{ title }}". Fill in the blanks below!</h1>
-    <form action="/story">
-    {% for prompt in prompts %}
-        <label for="prompt">{{ prompt }}: </label>
-        <input id="prompt" name="{{ prompt }}" type="text">
-    {% endfor %}
-        <input type="hidden" name="prompt" value="{{ prompt_id }}">
-        <button>Submit</button>
-    </form>
+    <h1>You have chosen <b>{{ title }}</b></h1>
+    <h3>Please fill in the prompts below!</h3>
+    
+    <div class="container">
+        <form action="/story" id="prompt-form">
+        {% for prompt in prompts %}
+            <label for="story_prompt">{{ prompt }}: </label>
+            <input id="story_prompt" name="{{ prompt }}" type="text">
+        {% endfor %}
+            <input type="hidden" name="story_prompt" value="{{ prompt_id }}">
+            <button>Submit</button>
+        </form>
+    </div>
 
 {% endblock %}
 

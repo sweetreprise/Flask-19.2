@@ -1,8 +1,36 @@
-input {
-    display: block;
-    margin: 4px;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+h1, h3 {
+    text-align: center;
+    color: #666699;
 }
 
-button {
-    margin: 5px;
+body {
+    background-color: #f9fafb;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    align-items: center;
+}
+
+
+/* form.html */
+#prompt-form input {
+    display: block;
+    margin: 3px 3px 3px 30%;
+}
+
+#prompt-form label {
+    margin-left: 30%;
+}
+
+#prompt-form button {
+    margin-left: 30%;
 }

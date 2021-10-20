@@ -52,9 +52,9 @@ story_1 = Story(
 
 story_2 = Story(
     "two",
-    "Afternoon baking",
-    ["noun", "baking_ingredient", "adjective", "emotion", "verb"],
-    """Today I baked a {noun}. I put so much {baking_ingredient} that it came out a little {adjective}. That's okay though, I was still {emotion} because my friends {verb} all of it."""
+    "Afternoon Baking",
+    ["noun", "baking_ingredient", "adjective", "emotion", "verb_past"],
+    """Today I baked a {noun}. I put so much {baking_ingredient} that it came out a little {adjective}. That's okay though, I was still {emotion} because my friends {verb_past} all of it."""
 )
 
 story_3 = Story(
@@ -73,7 +73,7 @@ story_4 = Story(
 
 story_5 = Story(
     "five",
-    "Pet adventure",
+    "Pet Adventure",
     ["animal", "verb", "adjective", "plural_noun", "place", "emotion"],
     """I have always wanted a {animal} to {verb} with and love. I would pet its {adjective} head and give them lots of {plural_noun}. We would go on walks in the {place} and make everybody {emotion}"""
 )
